@@ -19,7 +19,7 @@ def register(first_name,last_name,username, password, age,address):
     print(sql)
     cursor.execute(sql)
     connection.commit()
-    print()
+    print('User has been added')
     cursor.close()
     connection.close()
 
@@ -46,9 +46,21 @@ def get_user_details():
     username = input('username')
     password = input('password')
 
+
     login(username, password)
 
 
 # get_user_details()
 
-register('ken','john','kjohn', '2229', 2,'marlin')
+def user_registration_details():
+    username = input('Username ')
+    password = input('Password ')
+    first_name = input('First_name ')
+    last_name = input('Last_name ')
+    age = input('Age ')
+    address = input('Address ')
+
+    register(first_name,last_name,username, password, age,address)
+
+
+
