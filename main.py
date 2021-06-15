@@ -25,7 +25,7 @@ def register(first_name,last_name,username, password, age,address):
 
 
 def stored_user():
-    users_list = {'username': 'joe', 'password': 12345}
+    users_list = {'username': '123456', 'password': 12345}
     return users_list
 
 
@@ -48,7 +48,6 @@ def get_user_details():
 
 
     login(username, password)
-
 
 # get_user_details()
 

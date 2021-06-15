@@ -1,5 +1,7 @@
 from conn import DBconnection
 
+from main import login
+
 db_connection = DBconnection()
 
 def create_database():
@@ -18,7 +20,11 @@ def main_page():
     data = db_student_query.fetchone()
     if data == None:
         print('register')
-    print(data[1] + data[2])
     
+    # print(data[1] + data[2])
+    password = input('Password: ')
+    login(student_no, password)
+
+
 
 main_page()
